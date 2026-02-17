@@ -169,7 +169,8 @@ class TaskController extends AsyncNotifier<List<Task>> {
       await NotificationsService.instance.scheduleTaskReminder(
         id: task.id.hashCode,
         title: '📌 Tarea: ${task.title}',
-        body: 'Vence pronto: ${_formatDateTime(task.dueDate!)}',
+        body:
+            'Vence pronto: ${_formatDateTime(task.dueDate!)} revise lo antes posible',
         scheduledAtLocal: scheduledDate,
       );
     }
